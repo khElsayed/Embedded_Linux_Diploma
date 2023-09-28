@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 
 int main()
 {
@@ -15,24 +16,24 @@ int main()
 
     if((a != 0) && (b != 0) && (c != 0))
     {
-    if((a*a) == (b*b) + (c*c))
+    if(pow(a,2) == pow(b,2) + pow(c,2))
         angle = a;
-    else if((b*b) == (a*a) + (c*c))
+    else if(pow(b,2) == pow(a,2) + pow(c,2))
         angle = b;
-    else if((c*c) == (b*b) + (a*a))
+    else if(pow(c,2) == pow(b,2) + pow(a,2))
         angle = c;
     else
         angle = 0;
     }
     
-    if(angle == a)
+    if(angle == 0)
+        std::cout << "The given triangle is not a right angle triangle" << std::endl;
+    else if(angle == a)
         std::cout << "The angle between B and C is 90 degree, hence it is a right angle triangle" << std::endl;
     else if(angle == b)
         std::cout << "The angle between A and C is 90 degree, hence it is a right angle triangle" << std::endl;
     else if(angle == c)
         std::cout << "The angle between A and B is 90 degree, hence it is a right angle triangle" << std::endl;
-    else if(angle == 0)
-        std::cout << "The given triangle is not a right angle triangle" << std::endl;
-
+    
     return 0;
 }
