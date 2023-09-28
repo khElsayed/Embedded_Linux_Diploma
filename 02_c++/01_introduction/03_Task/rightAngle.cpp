@@ -13,6 +13,8 @@ int main()
     std::cout << "Enter length of side C: " << std::endl;
     std::cin >> c;
 
+    if((a != 0) && (b != 0) && (c != 0))
+    {
     if((a*a) == (b*b) + (c*c))
         angle = a;
     else if((b*b) == (a*a) + (c*c))
@@ -21,6 +23,7 @@ int main()
         angle = c;
     else
         angle = 0;
+    }
     
     if(angle == a)
         std::cout << "The angle between B and C is 90 degree, hence it is a right angle triangle" << std::endl;
