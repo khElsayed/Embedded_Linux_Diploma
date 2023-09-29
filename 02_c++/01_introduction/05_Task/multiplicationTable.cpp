@@ -10,12 +10,12 @@ int main()
     temp = num;
     std::cout << "Enter max multiplication: " << std::endl;
     std::cin >> max;
-    std::cout << "Table of " << num << " is";
+    std::cout << "Table of " << num << " is" << std::endl;
     for(int i=1; i<=max; i++)
     {
-        std::cout << " " << temp << " ";
+        std::cout << num << " * " << i << " = "  << temp << std::endl;
         temp += num;
     }
-    
+
     return 0;
 }
